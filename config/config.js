@@ -56,6 +56,12 @@ module.exports = {
     smtp_port: process.env.SMTP_PORT,
     smtp_user: process.env.SMTP_USER,
     smtp_pass: process.env.SMTP_PASS,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false, // You may need to include this line if facing certificate issues
+      },
+    },
     pool: {
       handleDisconnects: true,
       max: 100,
