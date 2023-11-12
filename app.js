@@ -14,7 +14,7 @@ app.get('/',(req,res)=>{
    res.send('Sudharsan Server is Running')
 })
 
-const port = process.env.port || 3700
+const port = process.env.PORT || 3700
 
 
 app.listen(port,()=>{
